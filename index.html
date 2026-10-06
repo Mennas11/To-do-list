@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your to-do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="auth-page">
+
+    <!-- Register -->
+    <div class="registration">
+        <h2>Welcome to your to-do app</h2>
+        <h3>Register Now!</h3>
+        <form id="register-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="Enter your email">
+            <label for="username">Username</label>
+            <input type="text" id="username" required placeholder="Enter your username">
+            <label for="password">Password</label>
+            <input type="password" id="password" required placeholder="Enter your password">
+            <p id="register-error" class="message"></p>
+            <button id="register-btn" type="submit">Register</button>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </form>
+    </div>
+
+    <!-- Login -->
+    <div class="login hidden">
+        <h2>Welcome back!</h2>
+        <h3>Login to your account</h3>
+        <form id="login-form">
+            <label for="login-identifier">Email or Username</label>
+            <input type="text" id="login-identifier" required placeholder="Enter your email or username">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required placeholder="Enter your password">
+            <p id="login-message" class="message"></p>
+            <button id="login-btn" type="submit">Login</button>
+            <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+        </form>
+    </div>
+
+    <script src="./storage.js"></script>
+    <script src="./auth.js"></script>
+</body>
+</html>

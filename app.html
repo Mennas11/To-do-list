@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="app-page">
+
+    <!-- Top navbar -->
+    <nav>
+        <span class="brand"><i class="fa-solid fa-circle-check"></i> TaskBubble</span>
+        <!-- theme button + logout button -->
+     <button id="theme-btn">
+         <i class="fa-solid fa-moon"></i>
+     </button> 
+     <button id="logout-btn">
+    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+     </button>    
+</nav>
+
+    <!-- Sidebar -->
+    <aside>
+        <!-- 3 buttons: All, Pending, Done -->
+         <button id="all-btn" class="active">
+             <i class="fa-solid fa-list"></i> All Tasks
+            </button>
+         <button id="pending-btn">
+            <i class="fa-regular fa-clock"></i> Pending Tasks
+        </button>
+         <button id="done-btn">
+            <i class="fa-solid fa-check"></i> Completed Tasks
+        </button>
+    </aside>
+
+    <!-- Main area -->
+    <main>
+       <h2>My Tasks</h2>
+
+           <input type="search" id="search" placeholder="Search tasks...">
+
+
+    <section class="card">
+        <form id="task-form">
+            <label for="task-title">Task title</label>
+            <input type="text" id="task-title" required placeholder="What do you need to do?">
+
+            <label for="task-due">Due date</label>
+            <input type="date" id="task-due">
+
+            <label for="task-priority">Priority</label>
+            <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button type="submit" id="add-btn">Add Task</button>
+        </form>
+    </section>
+
+
+    <ul id="task-list"></ul>
+    </main>
+
+    <script src="./storage.js"></script>
+    <script src="./theme.js"></script>
+    <script src="./task.js"></script>
+</body>
+</html>
